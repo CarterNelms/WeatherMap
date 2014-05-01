@@ -1,0 +1,60 @@
+@controlHeight: 5%;
+
+html, body, #page-wrap{
+  height: 100%;
+  margin: 0;
+}
+
+#leftHalf, #rightHalf{
+  width: 50%;
+  height: 100%;
+  display: inline-block;
+  vertical-align: top;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  border: 2px solid blue;
+}
+
+#leftHalf{
+  #controls{
+    height: @controlHeight;
+    > *{
+      height: 100%;
+      margin: 0;
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+    }
+    #address{
+      width: 80%;
+    }
+    #add{
+      width: 20%;
+      color: red;
+      font-weight: bold;
+    }
+  }
+
+  #map{
+    height: 100% - @controlHeight;
+  }
+}
+
+#forecasts{
+  height: 100%;
+  overflow-y: scroll;
+
+  > .forecast{
+    height: 300px;
+    width: 100%;
+  }
+  > .weatherChart {
+    width : 100%;
+    height  : 500px;
+  } 
+}
+
+// #map{
+//   height: 500px;
+//   width: 500px;
+//   background-color: red;
+// }
